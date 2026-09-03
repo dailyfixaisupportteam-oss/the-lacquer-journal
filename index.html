@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Lacquer Journal — Modern Nail Aesthetics & Salon Formulas</title>
-  <meta name="description" content="The definitive editorial guide to runway nail trends, glazed minimalism, autumn palettes, and verified salon tech formulas.">
+  <title>The Lacquer Journal — Editorial Nail Aesthetics, Color Theory & Salon Architecture</title>
+  <meta name="description" content="A luxury digital gazette exploring 2026 runway nail aesthetics, quiet luxury manicures, seasonal color architecture, and verified professional salon formulas.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -52,392 +50,324 @@
     .editorial-border {
       border-color: rgba(26, 21, 19, 0.08);
     }
-    .editorial-card {
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-    }
-    .editorial-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 32px -8px rgba(26, 21, 19, 0.08);
-    }
   </style>
 </head>
-<body class="bg-ivory text-espresso antialiased">
+<body class="bg-ivory text-espresso antialiased selection:bg-terracotta selection:text-white">
 
-  <!-- TOP EDITORIAL BAR -->
+  <!-- TOP GAZETTE TICKER -->
   <div class="bg-espresso text-ivory text-[11px] font-medium tracking-widest uppercase py-2 px-4 text-center border-b border-white/10">
-    <span>✦ The Fall 2026 Trend Forecast is Live &bull; Updated Daily &bull; Volume IV ✦</span>
+    <span>✦ The Lacquer Journal &bull; Autumn / Winter 2026 Gazette &bull; Verified Salon Archive ✦</span>
   </div>
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur-md border-b editorial-border">
+  <header class="sticky top-0 z-50 bg-ivory/95 backdrop-blur-md border-b editorial-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Mobile Menu Button -->
-      <button class="md:hidden text-espresso text-xl focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-        <i class="fa-solid fa-bars-staggered"></i>
-      </button>
-
-      <!-- Brand Logo -->
-      <a href="index.html" class="flex flex-col items-center mx-auto md:mx-0">
+      <a href="index.html" class="flex flex-col">
         <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-espresso">The Lacquer Journal</span>
-        <span class="text-[9px] uppercase tracking-[0.25em] text-editorialGray font-semibold mt-0.5">Salon & Aesthetic Gazette</span>
+        <span class="text-[9px] uppercase tracking-[0.25em] text-editorialGray font-semibold">Editorial Nail Aesthetics</span>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold uppercase tracking-wider text-espresso/80">
-        <a href="index.html" class="text-terracotta border-b-2 border-terracotta pb-1">Home</a>
-        <a href="fall-trends.html" class="hover:text-terracotta transition">Fall Trends 2026</a>
-        <a href="clean-minimal.html" class="hover:text-terracotta transition">Clean & Glazed</a>
-        <a href="dark-glam.html" class="hover:text-terracotta transition">Spooky & Dark Glam</a>
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold text-espresso/80">
+        <a href="index.html" class="text-terracotta transition">Home</a>
+        <a href="fall-trends.html" class="hover:text-terracotta transition">Fall Trends</a>
+        <a href="clean-minimal.html" class="hover:text-terracotta transition">Clean Minimal</a>
+        <a href="dark-glam.html" class="hover:text-terracotta transition">Dark Glam</a>
         <a href="salon-formulas.html" class="hover:text-terracotta transition">Salon Vault</a>
       </nav>
 
-      <!-- Right Action -->
-      <div class="hidden sm:flex items-center space-x-4">
-        <a href="fall-trends.html" class="bg-espresso text-ivory hover:bg-terracotta text-[11px] font-bold uppercase tracking-widest px-5 py-2.5 rounded-full transition duration-200 shadow-sm">
-          Read Issue
-        </a>
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-ivory border-b editorial-border px-6 py-4 space-y-3 text-sm font-semibold tracking-wider uppercase">
-      <a href="index.html" class="block text-terracotta">Home</a>
-      <a href="fall-trends.html" class="block hover:text-terracotta">Fall Trends 2026</a>
-      <a href="clean-minimal.html" class="block hover:text-terracotta">Clean & Glazed</a>
-      <a href="dark-glam.html" class="block hover:text-terracotta">Spooky & Dark Glam</a>
-      <a href="salon-formulas.html" class="block hover:text-terracotta">Salon Vault</a>
+      <a href="salon-formulas.html" class="bg-espresso hover:bg-terracotta text-ivory text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition shadow-sm">
+        Salon Formulas
+      </a>
     </div>
   </header>
 
-  <!-- HERO SECTION WITH VIDEO LOOP -->
-  <section class="relative w-full h-[70vh] min-h-[520px] max-h-[700px] overflow-hidden flex items-center justify-center bg-espresso">
-    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-      <source src="hero-video.mp4.mp4" type="video/mp4">
-    </video>
-
-    <div class="absolute inset-0 bg-espresso/50 backdrop-blur-[1px]"></div>
-
-    <div class="relative z-10 text-center text-ivory px-4 max-w-4xl mx-auto">
-      <span class="inline-flex items-center gap-2 uppercase tracking-widest text-[11px] font-bold text-champagne bg-black/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-champagne/30 mb-5">
-        <i class="fa-solid fa-sparkles text-xs"></i> 2026 Editorial Forecast
-      </span>
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-16 overflow-hidden border-b editorial-border bg-[#F5EFE6]">
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 uppercase tracking-widest text-[11px] font-bold text-terracotta bg-terracotta-50 px-4 py-1.5 rounded-full border border-terracotta/20 mb-6">
+        ✦ Fall 2026 Editorial Forecast
+      </div>
       
-      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-5 tracking-tight">
-        The Lacquer Journal
+      <h1 class="font-serif text-4xl sm:text-6xl font-bold text-espresso leading-[1.12] mb-6">
+        The Architecture of Modern <span class="italic font-normal text-terracotta">Nail Artistry</span>
       </h1>
       
-      <p class="text-sm sm:text-lg text-ivory/85 max-w-2xl mx-auto leading-relaxed mb-8 font-light">
-        The Definitive Guide to Modern Nail Aesthetics, Runway Trends & Verified Salon Tech Formulas.
+      <p class="text-sm sm:text-base text-editorialGray max-w-2xl mx-auto font-light leading-relaxed mb-8">
+        Runway color theory, high-gloss non-wipe chemistry, and copyable salon request scripts. Curated strictly for aesthetic purists and professional technicians.
       </p>
 
       <div class="flex flex-wrap items-center justify-center gap-4">
-        <a href="fall-trends.html" class="bg-terracotta hover:bg-terracotta-600 text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest transition shadow-lg flex items-center gap-2">
-          <span>Explore Fall Forecast</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        <a href="fall-trends.html" class="bg-terracotta hover:bg-terracotta-600 text-white text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-full transition shadow-md">
+          Explore Fall Forecast &rarr;
         </a>
-        <a href="salon-formulas.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-ivory border border-white/30 px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest transition">
-          View Salon Vault
+        <a href="salon-formulas.html" class="bg-white hover:bg-ivory border editorial-border text-espresso text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-full transition shadow-sm">
+          Access Salon Vault
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ADSTERRA SLOT 1: TOP 728x90 LEADERBOARD BANNER -->
-  <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col items-center justify-center">
-    <div class="text-[10px] uppercase tracking-widest text-editorialGray/60 font-semibold mb-1.5">Sponsored Style Edit</div>
-    <div class="w-full max-w-[728px] min-h-[90px] bg-white border editorial-border rounded flex items-center justify-center text-xs text-editorialGray/50 overflow-hidden">
-      <span>728x90 Leaderboard Ad Placement</span>
+  <!-- ============================================ -->
+  <!-- ADSTERRA SLOT 1: 728x90 TOP LEADERBOARD      -->
+  <!-- ============================================ -->
+  <div class="my-10 text-center overflow-hidden">
+    <div class="text-[10px] uppercase tracking-widest text-editorialGray/50 font-semibold mb-2">Sponsored Style Edit</div>
+    <div class="w-full max-w-[728px] min-h-[90px] mx-auto flex items-center justify-center">
+      <script>
+        atOptions = {
+          'key' : '26ea5456bce295443f2f72d3f6a37952',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://pierhygienic.com/26ea5456bce295443f2f72d3f6a37952/invoke.js"></script>
     </div>
   </div>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-
-    <!-- SECTION TITLE -->
-    <div class="flex items-center justify-between border-b editorial-border pb-4 mb-8">
-      <div>
-        <span class="text-[11px] font-bold uppercase tracking-widest text-terracotta">Curated Edition</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso">Editor’s Top Story</h2>
-      </div>
-      <span class="text-xs text-editorialGray font-medium">Issue #28 &bull; Fall 2026</span>
-    </div>
-
-    <!-- FEATURED MAGAZINE HERO CARD -->
-    <article class="relative bg-white border editorial-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition mb-16">
+  <!-- FEATURED COVER STORY -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+    <a href="fall-trends.html" class="group block bg-white rounded-3xl overflow-hidden border editorial-border shadow-sm hover:shadow-xl transition duration-500">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
-        <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-[460px] overflow-hidden bg-espresso/5">
-          <img src="Article5.jpg_202609021135.jpeg" alt="Spiced Terracotta Nails" class="w-full h-full object-cover object-center transform hover:scale-105 transition duration-700">
-          <span class="absolute top-4 left-4 bg-espresso text-champagne text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-md">
-            ✦ Editor’s Top Pick
-          </span>
+        <div class="lg:col-span-7 overflow-hidden bg-espresso/5 min-h-[340px] sm:min-h-[460px]">
+          <img src="fall-post-1.jpg_202609021432.jpeg" alt="Toasted Caramel Glazed Nails" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
         </div>
-
-        <div class="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between bg-white">
+        <div class="lg:col-span-5 p-8 sm:p-12 flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-3 text-xs font-semibold uppercase tracking-wider text-editorialGray mb-3">
-              <span class="text-terracotta">Trend Analysis</span>
-              <span>&bull;</span>
-              <span>5 Min Read</span>
+            <div class="inline-flex items-center gap-2 uppercase tracking-widest text-[10px] font-bold text-terracotta mb-4">
+              ✦ Editor's Top Pick &bull; Autumn 2026
             </div>
-            
-            <h3 class="font-serif text-2xl sm:text-4xl font-bold text-espresso leading-tight mb-4 hover:text-terracotta transition">
-              <a href="fall-trends.html">20 Spiced Terracotta & Amber Nails Dominating Fall 2026</a>
-            </h3>
-
-            <p class="text-sm sm:text-base text-espresso/70 leading-relaxed font-light mb-6">
-              From toasted caramel glazes to translucent amber layers, discover the warm, grounded hues replacing summer neon on high-fashion moodboards and verified salon scripts.
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso leading-snug group-hover:text-terracotta transition mb-4">
+              Toasted Caramel Glaze & Spiced Micro-French
+            </h2>
+            <p class="text-sm text-editorialGray font-light leading-relaxed mb-6">
+              The signature autumn manicure transitioning from summer glazed chrome to deep buttery amber. Featuring translucent undertones and fine champagne powder.
             </p>
-
-            <div class="bg-ivory p-4 rounded-xl border editorial-border mb-6">
-              <div class="text-[11px] font-bold uppercase tracking-wider text-espresso mb-1">
-                <i class="fa-solid fa-wand-magic-sparkles text-terracotta mr-1"></i> The Salon Formula
-              </div>
-              <p class="text-xs text-editorialGray italic">
-                Base: Sheer Honey Ochre (#C85A32) &bull; Accent: Amber Tortoise Swirl &bull; Finish: Wet Glass Topcoat
-              </p>
-            </div>
           </div>
-
-          <a href="fall-trends.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-espresso hover:text-terracotta transition group">
-            <span>Read Full Editorial</span>
-            <i class="fa-solid fa-arrow-right text-[11px] transform group-hover:translate-x-1 transition"></i>
-          </a>
+          <div class="pt-6 border-t editorial-border flex items-center justify-between text-xs text-editorialGray font-medium">
+            <span>By Editorial Beauty Desk</span>
+            <span class="text-terracotta font-bold uppercase tracking-wider flex items-center gap-1">Read Full Edition &rarr;</span>
+          </div>
         </div>
       </div>
-    </article>
+    </a>
+  </section>
 
-    <!-- SECTION TITLE: 3-COLUMN EDITORIAL GRID -->
-    <div class="flex items-center justify-between border-b editorial-border pb-4 mb-8">
+  <!-- 3-COLUMN EDITORIAL ARCHIVE GRID -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="flex items-center justify-between mb-10 pb-4 border-b editorial-border">
       <div>
-        <span class="text-[11px] font-bold uppercase tracking-widest text-terracotta">Volume Gallery</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso">The 2026 Style Edit</h2>
+        <span class="text-[11px] font-bold uppercase tracking-widest text-terracotta">Gazette Editions</span>
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso mt-0.5">The Curated Archive</h3>
       </div>
-      <a href="fall-trends.html" class="text-xs font-bold uppercase tracking-wider text-editorialGray hover:text-espresso transition">
-        View All Articles &rarr;
-      </a>
+      <span class="text-xs uppercase tracking-wider text-editorialGray font-medium hidden sm:inline">Volume IV &bull; Autumn Vault</span>
     </div>
 
-    <!-- 3-COLUMN EDITORIAL GRID -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- ================================================================= -->
+      <!-- [PERMANENT MARKER] INSERT DAILY NEW POST CARDS DIRECTLY BELOW     -->
+      <!-- روزانہ کی نئی پوسٹ کا چھوٹا کارڈ بالکل اس لائن کے نیچے پیسٹ کرنا ہے -->
+      <!-- ================================================================= -->
 
-      <!-- CARD 1: OAT-MILK GLAZED -->
-      <article class="editorial-card bg-white border editorial-border rounded-xl overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/5] overflow-hidden bg-espresso/5">
-          <img src="Article1.jpg_202609021134.jpeg" alt="Clean Girl Glazed Nails" class="w-full h-full object-cover">
-          <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-espresso text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border border-black/5">
-            ✦ Clean Minimalist
-          </span>
-        </div>
-        <div class="p-6 flex flex-col flex-1 justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-[11px] font-medium text-editorialGray uppercase tracking-wider mb-2">
-              <span>Minimal</span>
-              <span>&bull;</span>
-              <span>3 Min Read</span>
+      <!-- Article Card 1 -->
+      <article class="bg-white rounded-2xl overflow-hidden border editorial-border shadow-sm hover:shadow-md transition group flex flex-col justify-between">
+        <div>
+          <a href="fall-trends.html" class="block overflow-hidden h-64 bg-espresso/5">
+            <img src="fall-post-1.jpg_202609021432.jpeg" alt="Toasted Caramel Butter Glaze" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </a>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-[10px] uppercase tracking-wider text-terracotta font-bold mb-2">
+              <span>Color Architecture</span>
+              <span class="text-editorialGray">5 Min Read</span>
             </div>
-            <h3 class="font-serif text-xl font-bold text-espresso leading-snug mb-3 hover:text-terracotta transition">
-              <a href="clean-minimal.html">The Clean Girl Glaze: 7 Sheer Oat-Milk Designs for Effortless Daily Wear</a>
-            </h3>
-            <p class="text-xs text-espresso/70 leading-relaxed line-clamp-3 mb-4 font-light">
-              Reflective pearl chrome paired with sheer milky bases for refined, natural square manicures that never go out of style.
+            <h4 class="font-serif text-xl font-bold text-espresso group-hover:text-terracotta transition leading-snug mb-3">
+              <a href="fall-trends.html">The Toasted Caramel Butter Glaze: Warm Amber Radiance</a>
+            </h4>
+            <p class="text-xs text-editorialGray font-light leading-relaxed mb-4">
+              A sheer honey-caramel base beneath soft champagne pearl chrome dust tailored for heavy knitwear.
             </p>
           </div>
-          <a href="clean-minimal.html" class="text-[11px] font-bold uppercase tracking-widest text-terracotta flex items-center gap-1.5 hover:gap-2.5 transition-all">
-            <span>Read Article</span>
-            <i class="fa-solid fa-arrow-right text-[9px]"></i>
-          </a>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t editorial-border/50 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-editorialGray font-mono">Hex: #C68B59</span>
+          <a href="fall-trends.html" class="font-bold text-terracotta hover:underline">View Formula &rarr;</a>
         </div>
       </article>
 
-      <!-- CARD 2: EMERALD VELVET -->
-      <article class="editorial-card bg-white border editorial-border rounded-xl overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/5] overflow-hidden bg-espresso/5">
-          <img src="Article2.jpg_202609021134.jpeg" alt="Emerald Moss Velvet" class="w-full h-full object-cover">
-          <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-espresso text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border border-black/5">
-            ✦ Runway Luxe
-          </span>
-        </div>
-        <div class="p-6 flex flex-col flex-1 justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-[11px] font-medium text-editorialGray uppercase tracking-wider mb-2">
-              <span>Texture</span>
-              <span>&bull;</span>
-              <span>4 Min Read</span>
+      <!-- Article Card 2 -->
+      <article class="bg-white rounded-2xl overflow-hidden border editorial-border shadow-sm hover:shadow-md transition group flex flex-col justify-between">
+        <div>
+          <a href="clean-minimal.html" class="block overflow-hidden h-64 bg-espresso/5">
+            <img src="clean-post-1.jpg_202609021447.jpeg" alt="Sheer Oat Milk Glazed Nails" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </a>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-[10px] uppercase tracking-wider text-terracotta font-bold mb-2">
+              <span>Quiet Luxury</span>
+              <span class="text-editorialGray">4 Min Read</span>
             </div>
-            <h3 class="font-serif text-xl font-bold text-espresso leading-snug mb-3 hover:text-terracotta transition">
-              <a href="dark-glam.html">Emerald Moss Velvet: The Deep Green Cat-Eye Manicure Dominating Runways</a>
-            </h3>
-            <p class="text-xs text-espresso/70 leading-relaxed line-clamp-3 mb-4 font-light">
-              Dimensional magnetic shimmers and velvet deep moss finishes that catch every flicker of ambient evening light.
+            <h4 class="font-serif text-xl font-bold text-espresso group-hover:text-terracotta transition leading-snug mb-3">
+              <a href="clean-minimal.html">Sheer Oat-Milk Chrome: The Understated Luster</a>
+            </h4>
+            <p class="text-xs text-editorialGray font-light leading-relaxed mb-4">
+              Translucent milky foundation that illuminates natural nail beds with subtle pearl reflection.
             </p>
           </div>
-          <a href="dark-glam.html" class="text-[11px] font-bold uppercase tracking-widest text-terracotta flex items-center gap-1.5 hover:gap-2.5 transition-all">
-            <span>Read Article</span>
-            <i class="fa-solid fa-arrow-right text-[9px]"></i>
-          </a>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t editorial-border/50 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-editorialGray font-mono">Hex: #F4EBE2</span>
+          <a href="clean-minimal.html" class="font-bold text-terracotta hover:underline">View Formula &rarr;</a>
         </div>
       </article>
 
-      <!-- CARD 3: AMBER TORTOISESHELL -->
-      <article class="editorial-card bg-white border editorial-border rounded-xl overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/5] overflow-hidden bg-espresso/5">
-          <img src="Article3.jpg_202609021135.jpeg" alt="Amber Tortoiseshell" class="w-full h-full object-cover">
-          <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-espresso text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border border-black/5">
-            ✦ Autumn Warmth
-          </span>
-        </div>
-        <div class="p-6 flex flex-col flex-1 justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-[11px] font-medium text-editorialGray uppercase tracking-wider mb-2">
-              <span>Retro Chic</span>
-              <span>&bull;</span>
-              <span>4 Min Read</span>
+      <!-- Article Card 3 -->
+      <article class="bg-white rounded-2xl overflow-hidden border editorial-border shadow-sm hover:shadow-md transition group flex flex-col justify-between">
+        <div>
+          <a href="dark-glam.html" class="block overflow-hidden h-64 bg-espresso/5">
+            <img src="dark-post-1.jpg_202609021458.jpeg" alt="Vampy Cabernet Nails" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </a>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-[10px] uppercase tracking-wider text-terracotta font-bold mb-2">
+              <span>Runway Gothic</span>
+              <span class="text-editorialGray">6 Min Read</span>
             </div>
-            <h3 class="font-serif text-xl font-bold text-espresso leading-snug mb-3 hover:text-terracotta transition">
-              <a href="fall-trends.html">Amber Tortoiseshell Accents: The Retro Chic Nail Trend Making a Major Comeback</a>
-            </h3>
-            <p class="text-xs text-espresso/70 leading-relaxed line-clamp-3 mb-4 font-light">
-              Honeyed ambers, melted cinnamon, and high-shine espresso spots combined in an iconic fall aesthetic.
+            <h4 class="font-serif text-xl font-bold text-espresso group-hover:text-terracotta transition leading-snug mb-3">
+              <a href="dark-glam.html">Vampy Cabernet Jelly: Translucent Black-Cherry Depth</a>
+            </h4>
+            <p class="text-xs text-editorialGray font-light leading-relaxed mb-4">
+              Moving beyond flat black; preserving a glowing ruby core that radiates under evening candlelight.
             </p>
           </div>
-          <a href="fall-trends.html" class="text-[11px] font-bold uppercase tracking-widest text-terracotta flex items-center gap-1.5 hover:gap-2.5 transition-all">
-            <span>Read Article</span>
-            <i class="fa-solid fa-arrow-right text-[9px]"></i>
-          </a>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t editorial-border/50 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-editorialGray font-mono">Hex: #3D0C15</span>
+          <a href="dark-glam.html" class="font-bold text-terracotta hover:underline">View Formula &rarr;</a>
         </div>
       </article>
 
-      <!-- ADSTERRA SLOT 2: IN-GRID SPONSORED CARD (300x250) -->
-      <div class="editorial-card bg-ivory border editorial-border rounded-xl p-6 flex flex-col items-center justify-center text-center">
-        <span class="text-[10px] uppercase tracking-widest text-editorialGray/60 font-semibold mb-3">Sponsored Style Edit</span>
-        <div class="w-[300px] h-[250px] bg-white border editorial-border rounded flex items-center justify-center text-xs text-editorialGray/50 overflow-hidden shadow-inner">
-          <span>300x250 In-Grid Ad Slot</span>
-        </div>
-        <span class="text-[10px] text-editorialGray/50 mt-3 font-light">Handpicked editorial partner</span>
-      </div>
-
-      <!-- CARD 4: VAMPY BURGUNDY & STARS -->
-      <article class="editorial-card bg-white border editorial-border rounded-xl overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/5] overflow-hidden bg-espresso/5">
-          <img src="Article4.jpg_202609021135.jpeg" alt="Vampy Burgundy Nails" class="w-full h-full object-cover">
-          <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-espresso text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border border-black/5">
-            ✦ Spooky Glam
-          </span>
-        </div>
-        <div class="p-6 flex flex-col flex-1 justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-[11px] font-medium text-editorialGray uppercase tracking-wider mb-2">
-              <span>Gothic Chic</span>
-              <span>&bull;</span>
-              <span>5 Min Read</span>
+      <!-- Article Card 4 -->
+      <article class="bg-white rounded-2xl overflow-hidden border editorial-border shadow-sm hover:shadow-md transition group flex flex-col justify-between">
+        <div>
+          <a href="salon-formulas.html" class="block overflow-hidden h-64 bg-espresso/5">
+            <img src="salon-post-1.jpg" alt="Architectural BIAB Manicure Apex" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </a>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-[10px] uppercase tracking-wider text-terracotta font-bold mb-2">
+              <span>Technical Architecture</span>
+              <span class="text-editorialGray">7 Min Read</span>
             </div>
-            <h3 class="font-serif text-xl font-bold text-espresso leading-snug mb-3 hover:text-terracotta transition">
-              <a href="dark-glam.html">Vampy Burgundy & Celestial Stars: Subtle Gothic Elegance for October Nights</a>
-            </h3>
-            <p class="text-xs text-espresso/70 leading-relaxed line-clamp-3 mb-4 font-light">
-              Deep cabernet base adorned with delicate gold foil celestial constellations and ultra-fine starlight details.
+            <h4 class="font-serif text-xl font-bold text-espresso group-hover:text-terracotta transition leading-snug mb-3">
+              <a href="salon-formulas.html">Structured BIAB Apex: Engineering the Unbreakable Arch</a>
+            </h4>
+            <p class="text-xs text-editorialGray font-light leading-relaxed mb-4">
+              The physics of builder gel stress zones, inversion balance, and thermal curing protocols.
             </p>
           </div>
-          <a href="dark-glam.html" class="text-[11px] font-bold uppercase tracking-widest text-terracotta flex items-center gap-1.5 hover:gap-2.5 transition-all">
-            <span>Read Article</span>
-            <i class="fa-solid fa-arrow-right text-[9px]"></i>
-          </a>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t editorial-border/50 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-editorialGray font-mono">Method: BIAB Overlay</span>
+          <a href="salon-formulas.html" class="font-bold text-terracotta hover:underline">View Formula &rarr;</a>
         </div>
       </article>
 
-      <!-- CARD 5: PUMPKIN CHAI SWIRLS -->
-      <article class="editorial-card bg-white border editorial-border rounded-xl overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/5] overflow-hidden bg-espresso/5">
-          <img src="Article5.jpg_202609021135.jpeg" alt="Pumpkin Chai Swirls" class="w-full h-full object-cover">
-          <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-espresso text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border border-black/5">
-            ✦ Seasonal Hue
-          </span>
-        </div>
-        <div class="p-6 flex flex-col flex-1 justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-[11px] font-medium text-editorialGray uppercase tracking-wider mb-2">
-              <span>Warm Tones</span>
-              <span>&bull;</span>
-              <span>3 Min Read</span>
+      <!-- Article Card 5 -->
+      <article class="bg-white rounded-2xl overflow-hidden border editorial-border shadow-sm hover:shadow-md transition group flex flex-col justify-between">
+        <div>
+          <a href="fall-trends.html" class="block overflow-hidden h-64 bg-espresso/5">
+            <img src="fall-post-2.jpg_202609021432.jpeg" alt="Cinnamon Micro French Nails" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </a>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-[10px] uppercase tracking-wider text-terracotta font-bold mb-2">
+              <span>Minimalist French</span>
+              <span class="text-editorialGray">4 Min Read</span>
             </div>
-            <h3 class="font-serif text-xl font-bold text-espresso leading-snug mb-3 hover:text-terracotta transition">
-              <a href="fall-trends.html">Pumpkin Chai Swirls: 9 Muted Orange Sets That Feel Warm and Sophisticated</a>
-            </h3>
-            <p class="text-xs text-espresso/70 leading-relaxed line-clamp-3 mb-4 font-light">
-              Steering clear of harsh neon, these muted terracotta and spiced chai lattes create an understated fall vibe.
+            <h4 class="font-serif text-xl font-bold text-espresso group-hover:text-terracotta transition leading-snug mb-3">
+              <a href="fall-trends.html">The Spiced Cinnamon Micro-French: 1mm Precision Lines</a>
+            </h4>
+            <p class="text-xs text-editorialGray font-light leading-relaxed mb-4">
+              A semi-sheer milky rubber base with razor-thin terracotta tips designed for clean daily wear.
             </p>
           </div>
-          <a href="fall-trends.html" class="text-[11px] font-bold uppercase tracking-widest text-terracotta flex items-center gap-1.5 hover:gap-2.5 transition-all">
-            <span>Read Article</span>
-            <i class="fa-solid fa-arrow-right text-[9px]"></i>
-          </a>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t editorial-border/50 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-editorialGray font-mono">Hex: #B3542E</span>
+          <a href="fall-trends.html" class="font-bold text-terracotta hover:underline">View Formula &rarr;</a>
         </div>
       </article>
 
-      <!-- CARD 6: FLAWLESS FRENCH & SALON GUIDE -->
-      <article class="editorial-card bg-white border editorial-border rounded-xl overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/5] overflow-hidden bg-espresso/5">
-          <img src="Article6.jpg_202609021135.jpeg" alt="Flawless French Manicure" class="w-full h-full object-cover">
-          <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-espresso text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border border-black/5">
-            ✦ Salon Script
-          </span>
-        </div>
-        <div class="p-6 flex flex-col flex-1 justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-[11px] font-medium text-editorialGray uppercase tracking-wider mb-2">
-              <span>Nail Tech Tips</span>
-              <span>&bull;</span>
-              <span>4 Min Read</span>
+      <!-- Article Card 6 -->
+      <article class="bg-white rounded-2xl overflow-hidden border editorial-border shadow-sm hover:shadow-md transition group flex flex-col justify-between">
+        <div>
+          <a href="clean-minimal.html" class="block overflow-hidden h-64 bg-espresso/5">
+            <img src="clean-post-2.jpg_202609021447.jpeg" alt="Rosewater Soap Nails" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </a>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-[10px] uppercase tracking-wider text-terracotta font-bold mb-2">
+              <span>Clean Girl Archive</span>
+              <span class="text-editorialGray">5 Min Read</span>
             </div>
-            <h3 class="font-serif text-xl font-bold text-espresso leading-snug mb-3 hover:text-terracotta transition">
-              <a href="salon-formulas.html">The Exact Words to Tell Your Nail Tech for Flawless Fall French Tips</a>
-            </h3>
-            <p class="text-xs text-espresso/70 leading-relaxed line-clamp-3 mb-4 font-light">
-              Never walk out of the salon with thick, awkward tips again. Master the ratio, curve, and base opacity scripts.
+            <h4 class="font-serif text-xl font-bold text-espresso group-hover:text-terracotta transition leading-snug mb-3">
+              <a href="clean-minimal.html">Rosewater Soap Nails: The Ultra-Hydrated Wet Glass Finish</a>
+            </h4>
+            <p class="text-xs text-editorialGray font-light leading-relaxed mb-4">
+              Flawless Russian cuticle prep combined with double-coated blush jelly polish.
             </p>
           </div>
-          <a href="salon-formulas.html" class="text-[11px] font-bold uppercase tracking-widest text-terracotta flex items-center gap-1.5 hover:gap-2.5 transition-all">
-            <span>Read Article</span>
-            <i class="fa-solid fa-arrow-right text-[9px]"></i>
-          </a>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t editorial-border/50 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-editorialGray font-mono">Hex: #FCE5E2</span>
+          <a href="clean-minimal.html" class="font-bold text-terracotta hover:underline">View Formula &rarr;</a>
         </div>
       </article>
 
     </div>
-  </main>
+  </section>
 
-  <!-- EDITORIAL FOOTER -->
-  <footer class="bg-espresso text-ivory/80 pt-16 pb-12 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
-        <div class="md:col-span-2">
-          <span class="font-serif text-2xl font-bold tracking-tight text-ivory">The Lacquer Journal</span>
-          <p class="text-xs text-ivory/60 leading-relaxed mt-3 max-w-sm font-light">
-            An independent digital publication dedicated to modern manicure design, color chemistry, and verified salon tech formulas.
-          </p>
-        </div>
-        <div>
-          <h4 class="text-xs font-bold uppercase tracking-widest text-champagne mb-4">Editorial Editions</h4>
-          <ul class="space-y-2 text-xs font-medium text-ivory/70">
-            <li><a href="fall-trends.html" class="hover:text-ivory transition">Fall 2026 Forecast</a></li>
-            <li><a href="clean-minimal.html" class="hover:text-ivory transition">The Clean Girl Archive</a></li>
-            <li><a href="dark-glam.html" class="hover:text-ivory transition">Spooky Velvet & Gothic Glam</a></li>
-            <li><a href="salon-formulas.html" class="hover:text-ivory transition">The Salon Vault</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-xs font-bold uppercase tracking-widest text-champagne mb-4">Trust & Ethics</h4>
-          <ul class="space-y-2 text-xs font-medium text-ivory/70">
-            <li><a href="privacy.html#privacy" class="hover:text-ivory transition">Privacy Policy</a></li>
-            <li><a href="privacy.html#terms" class="hover:text-ivory transition">Terms of Service</a></li>
-            <li><a href="privacy.html#disclaimer" class="hover:text-ivory transition">Affiliate & Ad Disclaimer</a></li>
-          </ul>
-        </div>
+  <!-- ============================================ -->
+  <!-- ADSTERRA SLOT 2: 728x90 PRE-FOOTER BANNER    -->
+  <!-- ============================================ -->
+  <div class="my-12 text-center overflow-hidden">
+    <div class="text-[10px] uppercase tracking-widest text-editorialGray/50 font-semibold mb-2">Sponsored Style Edit</div>
+    <div class="w-full max-w-[728px] min-h-[90px] mx-auto flex items-center justify-center">
+      <script>
+        atOptions = {
+          'key' : '26ea5456bce295443f2f72d3f6a37952',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://pierhygienic.com/26ea5456bce295443f2f72d3f6a37952/invoke.js"></script>
+    </div>
+  </div>
+
+  <!-- FOOTER & LEGAL HUB -->
+  <footer class="bg-espresso text-ivory/80 py-12 border-t border-white/10 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="font-serif text-xl font-bold text-ivory mb-2">The Lacquer Journal</p>
+      <p class="text-ivory/60 font-light text-xs max-w-md mx-auto mb-6 leading-relaxed">
+        An independent digital gazette dedicated to modern manicure architecture, high-fashion color forecasting, and verified salon formulas.
+      </p>
+
+      <div class="space-x-6 text-xs text-ivory/70 mb-8">
+        <a href="fall-trends.html" class="hover:text-champagne transition">Fall 2026</a>
+        <a href="clean-minimal.html" class="hover:text-champagne transition">Clean Minimal</a>
+        <a href="dark-glam.html" class="hover:text-champagne transition">Dark Glam</a>
+        <a href="salon-formulas.html" class="hover:text-champagne transition">Salon Vault</a>
       </div>
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-ivory/50 font-light">
-        <p>&copy; 2026 The Lacquer Journal. All rights reserved.</p>
-        <p class="mt-2 sm:mt-0">Designed for Pinterest Editorial Reading</p>
+
+      <div class="space-x-4 text-[11px] text-ivory/50 border-t border-white/10 pt-6">
+        <a href="privacy.html#privacy" class="hover:text-ivory transition">Privacy Policy</a>
+        <span>&bull;</span>
+        <a href="privacy.html#terms" class="hover:text-ivory transition">Terms of Service</a>
+        <span>&bull;</span>
+        <a href="privacy.html#disclaimer" class="hover:text-ivory transition">Advertising Disclosure</a>
       </div>
+
+      <p class="text-ivory/30 text-[10px] mt-6">&copy; 2026 The Lacquer Journal. All rights reserved.</p>
     </div>
   </footer>
 
